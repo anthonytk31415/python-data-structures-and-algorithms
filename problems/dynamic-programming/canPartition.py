@@ -1,6 +1,10 @@
 # https://leetcode.com/problems/partition-equal-subset-sum/description/
 # 416. Partition Equal Subset Sum
 
+# You need to create all possible sumsof each number with each other. 
+# Iterate across nums. Store each possible sum. Check after sum construction if target is in the set. 
+
+# Time: O(n*targetSum), Space: O(targetSum)
 
 def canPartition(nums):
     s = sum(nums)
