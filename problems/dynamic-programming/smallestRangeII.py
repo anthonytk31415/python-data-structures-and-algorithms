@@ -10,6 +10,9 @@
 # A[i] + K or right, the smallest element should be either left or A[i + 1] - K
 
 
+
+
+
 from math import inf 
 def smallestRangeII1(nums, k):
 
@@ -64,5 +67,8 @@ k = 3
 
 nums = [9,10,5,9]
 k = 5
+
+nums = [1, 5, 8, 12, 14, 15, 16, 17, 18]
+k = 3
 
 print(smallestRangeII(nums, k))
