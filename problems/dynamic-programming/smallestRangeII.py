@@ -9,38 +9,11 @@
 # element, the largest is right. Thus, for each point, the largest element should be either 
 # A[i] + K or right, the smallest element should be either left or A[i + 1] - K
 
-
+# Time: O(n), Space: O(1)
 
 
 
 from math import inf 
-def smallestRangeII1(nums, k):
-
-    
-
-    dpp, dpm = [[0,0] for _ in range(len(nums))], [[0,0] for _ in range(len(nums))]# dp[i] = [max, min]
-    # print(dpp, dpm)
-    dpp[0], dpm[0] = [nums[0] + k, nums[0] + k], [nums[0] - k, nums[0] - k]
-
-
-    # x = nums[i] + k, or nums[i] - k
-    def defineDp(x, i, dpp, dpm):
-        if abs(max(x, dpp[i-1][0]) - min(x, dpp[i-1][1])) < abs(max(x, dpm[i-1][0]) - min(x, dpm[i-1][1])): 
-            return [max(x, dpp[i-1][0]), min(x, dpp[i-1][1])]
-        else: 
-            return [max(x, dpm[i-1][0]), min(x, dpm[i-1][1])]
-
-
-    for i in range(1, len(nums)): 
-        dpp[i] = defineDp(nums[i] + k, i, dpp, dpm)
-        dpm[i] = defineDp(nums[i] - k, i, dpp, dpm)
-
-
-    x, y = dpp[-1]
-    u, v = dpm[-1]
-    print(dpp, dpm)
-
-    return min(abs(x - y), abs(u - v))
 
 
 
@@ -72,3 +45,23 @@ nums = [1, 5, 8, 12, 14, 15, 16, 17, 18]
 k = 3
 
 print(smallestRangeII(nums, k))
+
+
+# Crap implementation below
+# def smallestRangeII1(nums, k):
+#     dpp, dpm = [[0,0] for _ in range(len(nums))], [[0,0] for _ in range(len(nums))]# dp[i] = [max, min]
+#     # print(dpp, dpm)
+#     dpp[0], dpm[0] = [nums[0] + k, nums[0] + k], [nums[0] - k, nums[0] - k]
+#     # x = nums[i] + k, or nums[i] - k
+#     def defineDp(x, i, dpp, dpm):
+#         if abs(max(x, dpp[i-1][0]) - min(x, dpp[i-1][1])) < abs(max(x, dpm[i-1][0]) - min(x, dpm[i-1][1])): 
+#             return [max(x, dpp[i-1][0]), min(x, dpp[i-1][1])]
+#         else: 
+#             return [max(x, dpm[i-1][0]), min(x, dpm[i-1][1])]
+#     for i in range(1, len(nums)): 
+#         dpp[i] = defineDp(nums[i] + k, i, dpp, dpm)
+#         dpm[i] = defineDp(nums[i] - k, i, dpp, dpm)
+#     x, y = dpp[-1]
+#     u, v = dpm[-1]
+#     print(dpp, dpm)
+#     return min(abs(x - y), abs(u - v))
