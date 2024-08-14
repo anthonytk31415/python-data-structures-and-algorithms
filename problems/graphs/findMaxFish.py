@@ -5,7 +5,7 @@
 
 # 2d union find; can also do prob a bfs or a dfs
 
-def findMaxFish(grid: list[list[int]]) -> int:
+def findMaxFish1(grid: list[list[int]]) -> int:
     parent, rank = {}, {}
     for i in range(len(grid)):
         for j in range(len(grid[0])):
@@ -38,6 +38,33 @@ def findMaxFish(grid: list[list[int]]) -> int:
 
     return maxFish 
 
+# DFS Solution; a bit less verbose. 
+def findMaxFish(grid: list[list[int]]) -> int:
+    visited = set()
+    maxFish = [0]
+
+    # pt = (x, y)
+    def dfs(pt): 
+        x, y = pt
+        res = grid[x][y]
+        for dx, dy in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
+            u, v = x + dx, y + dy
+            newPt = (u, v)
+            if 0 <= u < len(grid) and 0 <= v < len(grid[0]) and newPt not in visited and grid[u][v] > 0:  
+                visited.add(newPt)
+                res += dfs(newPt)
+        maxFish[0] = max(maxFish[0], res)
+        return res
+
+    for x in range(len(grid)):
+        for y in range(len(grid[0])):
+            pt = (x, y)
+            if pt not in visited and grid[x][y] > 0: 
+                visited.add(pt)
+                dfs(pt)            
+
+    return maxFish[0]
+
 grid = [[0,2,1,0],[4,0,0,3],[1,0,0,4],[0,3,2,0]]
-# grid = [[1,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,1]]
+grid = [[1,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,1]]
 print(findMaxFish(grid))
