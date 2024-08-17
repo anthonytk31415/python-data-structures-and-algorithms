@@ -14,3 +14,5 @@ nums.sort(key = lambda x: x[1])
 insort(nums, (3, 'd'), key = lambda x: x[1])
 
 print(nums)
+
+

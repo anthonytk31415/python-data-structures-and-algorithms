@@ -41,7 +41,6 @@ def canFinish(numCourses: int, prerequisites: list[list[int]]) -> bool:
     for u in range(numCourses):
         if inDegrees[u] == 0: 
             q.append(u)
-
     while q: 
         u = q.popleft()
         if u in graph: 
@@ -50,7 +49,6 @@ def canFinish(numCourses: int, prerequisites: list[list[int]]) -> bool:
                 if inDegrees[v] == 0: 
                     q.append(v)
 
-    # print(inDegrees)
     for x in inDegrees: 
         if inDegrees[x] > 0: return False
 

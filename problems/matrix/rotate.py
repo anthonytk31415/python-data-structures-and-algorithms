@@ -12,14 +12,11 @@ def rotate1(matrix: list[list[int]]) -> None:
             m[i][j], m[j][i], m[i][n-1-j], m[n-1-j][i] = m[n-1-j][i], m[i][j], m[j][i], m[i][n-1-j]
 
 
-
-def rotate(matrix: list[list[int]]) -> None:
-    
-    matrix[:] = matrix[::-1]
-
+# using iteration
+def rotate2(matrix: list[list[int]]) -> None:
     # row-symmetry
-    # for i in range(len(matrix)//2):
-    #     matrix[i], matrix[len(matrix) -1 - i] = matrix[len(matrix) - 1 - i], matrix[i]
+    for i in range(len(matrix)//2):
+        matrix[i], matrix[len(matrix) -1 - i] = matrix[len(matrix) - 1 - i], matrix[i]
 
     # reflect across downsloping diagonal symmetry
     for i in range(len(matrix)):
@@ -28,7 +25,15 @@ def rotate(matrix: list[list[int]]) -> None:
 
     # --> net effect: rotation 90' clockwise    
 
+# using list comprehension
+
+def rotate(matrix: list[list[int]]) -> None:
+    # row-symmetry
+    matrix[:] = matrix[::-1]
+
     
+
+
 # matrix = [[1,2,3],[4,5,6],[7,8,9]]
 matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
 rotate(matrix)

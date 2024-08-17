@@ -5,7 +5,7 @@
 
 from math import inf
 
-def arrayNesting(nums):
+def arrayNesting1(nums):
     n = len(nums)
     visited = [0]*n
     cycles = set()
@@ -41,6 +41,21 @@ def arrayNesting(nums):
     return max(paths)    
 
 # Union Find Solution
+
+def findParent(u, parent): 
+    if parent[u] != u: 
+        parent[u] = findParent(parent[u], parent)
+    return parent[u]
+
+
+def union(u, v, parent, rank):
+    return 
+
+
+
+def arrayNesting(nums):
+    parent = [x for x in range(nums)]
+    rank = [1 for _ in range(nums)]
 
 
 
