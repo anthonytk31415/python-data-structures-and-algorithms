@@ -64,3 +64,19 @@ board = [[-3,1,1,1],[-3,1,-3,1],[-3,2,1,1]]
 # print(maxUpperRight(board))
 print(maxLowerRight(board))
 print(maxLowerLeft(board))
+
+from math import inf 
+def maximumValueSum(board):
+    upperLeft = maxUpperLeft(board)
+    upperRight = maxUpperRight(board)
+    lowerRight = maxLowerRight(board)
+    lowerLeft = maxLowerLeft(board)
+
+    maxValue = -inf
+    for i1 in range(len(board)):
+        for i2 in range(i1+1, len(board)):
+            for j1 in range(len(board[0])):
+                for j2 in range(j1+1, len(board[0])): 
+                    candidates = []
+                    if i1 > 0: 
+                        candidates.append()
