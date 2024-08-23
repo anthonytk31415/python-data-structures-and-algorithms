@@ -4,6 +4,8 @@
 from math import inf
 # returns max of current position and prior valid positions
 
+# DP combined with SW. calculate maxleft and maxright by traversing twice. 
+# Then for each i, find the max pair of max left, max right. 
 
 
 def maximizeWin(prizePositions, k):
