@@ -8,6 +8,7 @@ from math import inf
 # Then for each i, find the max pair of max left, max right. 
 
 
+
 def maximizeWin(prizePositions, k):
     p = prizePositions
     n = len(prizePositions)

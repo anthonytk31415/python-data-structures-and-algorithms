@@ -19,7 +19,7 @@ def numberOfSubstrings(s):
             if s[left] == "1": ones -= 1
             left += 1 
 
-        if s[right] == "1":
+        if ones > 0:
             numZeroes = right - left + 1 - ones
             canSupport = int(math.sqrt(ones)) - numZeroes
             print("numZeroes: {}, canSupport: {}, right: {}, left: {}".format(numZeroes, canSupport, right, left))

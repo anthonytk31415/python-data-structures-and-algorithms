@@ -3,6 +3,11 @@
 
 from collections import defaultdict, deque
 
+# dfs to get the size of the connected component 
+# keep track of nodes visited for each connected component
+# then for each parent of connected component, check if the children have that same size as the parent. 
+# Time: O(mn), Space: O(n)
+
 
 def countCompleteComponents(n: int, edges: list[list[int]]) -> int:
     adj = defaultdict(list)
@@ -10,8 +15,6 @@ def countCompleteComponents(n: int, edges: list[list[int]]) -> int:
         adj[u].append(v)
         adj[v].append(u)
 
-    # dfs to get the size of the connected component 
-    # then for each parent, check of the children have that same size. 
     def dfs(u): 
         visited.add(u)
         for v in adj[u]:
