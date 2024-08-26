@@ -1,7 +1,6 @@
 # https://leetcode.com/problems/interval-list-intersections/description/?envType=problem-list-v2&envId=52dlem1s
 # 986. Interval List Intersections
 
-
 # Intervals. Use merge sort like algorithm. 
 
 def intervalIntersection(firstlist: list[list[int]], secondlist: list[list[int]]) -> list[list[int]]:
@@ -23,12 +22,6 @@ def intervalIntersection(firstlist: list[list[int]], secondlist: list[list[int]]
         else:  
             j += 1
 
-    # while i < len(firstlist): 
-    #     res.append(firstlist[i])
-    #     i += 1
-    # while j < len(secondlist): 
-    #     res.append(secondlist[j])
-    #     j += 1
     return res
 
 # firstList = [[0,2],[5,10],[13,23],[24,25]]
