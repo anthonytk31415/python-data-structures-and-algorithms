@@ -4,6 +4,10 @@
 from collections import deque 
 from heapq import heappush, heappop
 
+
+# priority queue implementation. O(nlogn) Time, O(n) space. 
+# could do a segment tree. 
+
 def maxEvents(events: list[list[int]]) -> int:
     minStart = min([event[0] for event in events])
     maxEnd = max([event[1] for event in events])
