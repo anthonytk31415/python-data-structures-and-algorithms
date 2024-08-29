@@ -2,9 +2,10 @@
 # 307. Range Sum Query - Mutable
 
 
-# this is the Segment Tree Implementation
+# his is the Segment Tree Implementation
+# O(n) initialization, O(logn) for update and range queries
 
-class NumArray:
+class SegmentTree:
 
     def __init__(self, nums: list[int]):
         self.arr = [0]*len(nums)*2
@@ -16,14 +17,12 @@ class NumArray:
         for i in range(self.n - 1, 0, -1): 
             self.arr[i] = self.arr[2*i] + self.arr[2*i + 1]
 
-
     def update(self, index: int, val: int) -> None:
         index += self.n
         delta = val - self.arr[index]
         while index >= 1: 
             self.arr[index] += delta
             index //=2
-
 
     def sumRange(self, left: int, right: int) -> int:
         res = 0
@@ -39,10 +38,12 @@ class NumArray:
                 right -= 1
             right //=2
         return res
-                
+            
 
-        return 
-    
+class NumArray(SegmentTree):
+    pass
+
+
 x = NumArray([1, 3, 5])
 
 print("sum 0 1: ", x.sumRange(0,1))
