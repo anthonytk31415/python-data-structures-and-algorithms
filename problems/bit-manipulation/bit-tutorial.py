@@ -1,6 +1,3 @@
-
-
-
 ## AND (&) OR (|) NOT (~) XOR (^)
 
 # # ~x is -x - 1
@@ -76,7 +73,15 @@ def pb(n):
 # x & y == 0 where y = 1 << power of 2 - 1
 # 12
 # 4 ==> 2
-x = 12
-pTwo = 1 << 2
-pb(x & (pTwo - 1))
-pb(pTwo)
+# x = 12
+# pTwo = 1 << 2
+# pb(x & (pTwo - 1))
+# pb(pTwo)
+
+
+# 
+
+# flip the xth bit
+x = 3
+a = 314
+pb(a)
