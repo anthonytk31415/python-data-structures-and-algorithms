@@ -7,7 +7,6 @@ class ListNode:
         self.next = next
 
 def modifiedList(nums: list[int], head): 
-
     nums = set(nums)
     dummy = ListNode
     dummy.next = nums
