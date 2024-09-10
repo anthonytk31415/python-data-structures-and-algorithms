@@ -5,15 +5,14 @@
 
 from collections import Counter
 
+
+# this is too slow because we have to iterate across all targets.  
 def countRangeSum(nums: list[int], lower: int, upper: int) -> int:
     count = 0
     prefixs = [0] + [x for x in nums]   
     cSums = Counter()
     for i in range(1, len(prefixs)):
         prefixs[i] = prefixs[i] + prefixs[i-1]
-
-    print(prefixs)
-
     for prefix in prefixs: 
         for target in range(lower, upper + 1): 
             if prefix - target in cSums: 
