@@ -73,7 +73,9 @@ class FenwickTreeMin:
 
 arr = [1,3,4,8,6,1,4,2]
 
-f = FenwickTreeMin(arr)
+# f = FenwickTreeMin(arr)
+f = FenwickTree(arr)
+print("arr: ", arr)
 print(f.tree)
 
 print(f.rangeQuery(0, 6))
