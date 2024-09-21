@@ -4,8 +4,8 @@
 # Time: O(nlogn) for sorting
 # Space: O(1) 
 
-# Greedy Method. Invariant: at i, we have a max range where we can make all sums up to maxRange. 
-# When we instantiate, we set max range = 0, sort coins, and start at i = 0. 
+# Greedy Method. Invariant: at ith coin, we have maxRange where we can make all sums up from 1 to maxRange. 
+# When we instantiate, we set maxRange = 0, sort coins, and start at i = 0, where i iterates across coins.
 # Iterate j from 1 to target. Since we have ranges, every time we get to a coin equal to j, we can add it to our max range. 
 # If j is out of the max range, increment the count, and add j to the maxRange.  
 
