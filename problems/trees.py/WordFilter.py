@@ -33,9 +33,5 @@ class WordFilter:
         return res
     
 
-x = 209
-print(bin(x & 0xFFFFFFFF))
 
 
-x = 1076
-print(bin(x & 0xFFFFFFFF))

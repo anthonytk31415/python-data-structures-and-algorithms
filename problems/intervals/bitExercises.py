@@ -85,6 +85,8 @@ a = 10
 c = 12
 
 
+
+
 # while a: 
 #     print(bin(a))
 #     a >> 1
