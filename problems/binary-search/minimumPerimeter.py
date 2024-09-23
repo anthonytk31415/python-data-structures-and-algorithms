@@ -7,6 +7,7 @@ from math import sqrt
 # Use arithmetic series: sum of n terms from 1 to n = n*(n + 1) / 2
 
 
+
 def getApples(r): 
     sigma = r*(r + 1)//2
     return 4*sigma*(1+2*r)
