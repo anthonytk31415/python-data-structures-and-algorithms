@@ -17,8 +17,7 @@ def computeLps(pattern):
         else: 
             if length != 0: 
                 length = lps[length - 1]        # backtrack to the last seen prefix that's a suffix
-            else: 
-                lps[i] = 0                  
+            else:             
                 i += 1
     return lps
 
