@@ -21,5 +21,5 @@ nums = [999,19,199]
 s = Solution()
 print(s.minElement(nums))
 
-for x in ascii_uppercase: 
-    print(x)
+# for x in ascii_uppercase: 
+#     print(x)

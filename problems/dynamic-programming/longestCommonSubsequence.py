@@ -48,4 +48,8 @@ text2 = "aaabbb"
 text1 = "abcba"
 text2 = "abcbcba"
 
+text1 = "morning"
+text2 = "triangle"
+
+
 print(longestCommonSubsequence(text1, text2))
