@@ -5,6 +5,11 @@
 # then for each cell, dfs forward as long as you have a word in a trie
 # if you hit a word, add it. 
 
+
+
+
+
+
 from collections import defaultdict
 
 def findWords(board: list[list[str]], words: list[str]) -> list[str]:
