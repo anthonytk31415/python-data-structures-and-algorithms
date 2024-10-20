@@ -1,6 +1,15 @@
 # https://leetcode.com/problems/car-fleet/description/?envType=problem-list-v2&envId=monotonic-stack
 # 853. Car Fleet
 
+# Calculate times to arrival for each car based on its position 
+# and speed. Then build a list with the positions and times, 
+# sorted by positions in descending order. 
+# The stack keeps track of the order of arrival. 
+# if a car collides with the one in front, don't push it. 
+# Return the length of the stack. 
+
+# Time: O(n), Space: O(n)
+
 class Solution:
     def carFleet(self, target: int, positions: list[int], speeds: list[int]) -> int:
         times = []
