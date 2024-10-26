@@ -16,7 +16,7 @@ def getNext(u, v, r, c):
 
 
 class Solution:
-    def matrixReshape(self, mat: List[List[int]], r: int, c: int) -> List[List[int]]:
+    def matrixReshape(self, mat: list[list[int]], r: int, c: int) -> list[list[int]]:
         rows, cols = len(mat), len(mat[0])
         if rows*cols != r*c: return mat
         newMat = [[None for _ in range(c)] for _ in range(r)]
