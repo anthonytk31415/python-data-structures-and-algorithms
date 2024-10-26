@@ -24,54 +24,54 @@
 # Space: O(mn) for m strings in folder with max length n
 
 
-def isSubFolderInFolders(x, folders): 
-    for i in range(len(x) - 1, -1, -1): 
-        if x[i] == "/" and x[:i] in folders: return True
+# def isSubFolderInFolders(folderPath, folders): 
+#     for i in range(len(folderPath) - 1, -1, -1): 
+#         if folderPath[i] == "/" and folderPath[:i] in folders: return True
+#     return False
+
+# class Solution:
+#     def removeSubfolders(self, folder: list[str]) -> list[str]:
+#         folders = set(folder)
+#         res = []
+#         for folderPath in folder: 
+#             if not isSubFolderInFolders(folderPath, folders): 
+#                 res.append(folderPath)
+#         return res
+    
+
+
+def getSubStringUpNotInclusive(string, i): 
+    res = ""
+    for j in range(i): 
+        res += string[j]
+    return res
+
+def isSubFolderInFolders(folderPath, folders): 
+    for i in range(len(folderPath) - 1, -1, -1): 
+        if folderPath[i] == "/" and getSubStringUpNotInclusive(folderPath, i) in folders: return True
     return False
 
 class Solution:
     def removeSubfolders(self, folder: list[str]) -> list[str]:
         folders = set(folder)
         res = []
-        for x in folder: 
-            if not isSubFolderInFolders(x, folders): 
-                res.append(x)
+        for folderPath in folder: 
+            if not isSubFolderInFolders(folderPath, folders): 
+                res.append(folderPath)
         return res
-    
-
-
-# def getSubStringUpNotInclusive(x, i): 
-#     res = ""
-#     for j in range(i): 
-#         res += x[j]
-#     return res
-
-# def isSubFolderInFolders(x, res, folders): 
-#     for i in range(len(x) - 1, -1, -1): 
-#         if x[i] == "/" and getSubStringUpNotInclusive(x, i) in folders: return True
-#     return False
-
-# class Solution:
-#     def removeSubfolders(self, folder: List[str]) -> List[str]:
-#         folders = set(folder)
-#         res = []
-#         for x in folder: 
-#             if not isSubFolderInFolders(x, res, folders): 
-#                 res.append(x)
-#         return res
     
 
 s = Solution()
 
 folder = ["/1/2/3", "/1", "/1/2"]
-# ["/1"]
+# # ["/1"]
 
 
-folder = ["1/2/3", "/2/3", "/3/4"]
-# ["1/2/3", "/2/3", "/3/4"]
+# folder = ["1/2/3", "/2/3", "/3/4"]
+# # ["1/2/3", "/2/3", "/3/4"]
 
-folder = ["/1/2/3", "/1/2/3/4", "/2/3/4", "/2/3"]
-# ["/1/2/3", "/2/3"]
+# folder = ["/1/2/3", "/1/2/3/4", "/2/3/4", "/2/3"]
+# # ["/1/2/3", "/2/3"]
 
 
 print(s.removeSubfolders(folder))
