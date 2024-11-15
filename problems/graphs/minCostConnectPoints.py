@@ -1,6 +1,16 @@
 # https://leetcode.com/problems/min-cost-to-connect-all-points/description/
 # 1584. Min Cost to Connect All Points
 
+# Kruskals union find implementation. 
+# For each pair of points, calculate the manhattan distance as the weight. 
+# Minimally choose each edge. If they don't have a common parent, union them
+# (i.e. they don't create a cycle). Do it V-1 Times. 
+
+# Time: O((V+E)*log(V+E))
+# Space: O(V**2)
+
+
+
 from heapq import heappush, heappop
 
 def mDist(u, v): 
