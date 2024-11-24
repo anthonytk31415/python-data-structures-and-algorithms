@@ -27,7 +27,6 @@ def find_local_maxima(arr):
             left = mid
         else: 
             right = mid
-
     return right
     
 arr = [10,23,17,20,1,2,3,4,-3,5]

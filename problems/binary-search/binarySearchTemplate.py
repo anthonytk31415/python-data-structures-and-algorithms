@@ -3,6 +3,12 @@ def f(x):
     return x > 5
  
 # Return the index of the earliest occurrence of when arr
+# satisifies some function
+
+# Key assumption: for arr, it's sorted in such a way that : 
+# f(0) = 0, f(1) = 0, .... f(k-1) = 0, f(k) = 1, f(k+1) = 1, ...
+# so we can then binary search the transition point k. 
+
 # Invariant: 
 #   f(left) = 0
 #   f(right) = 1
@@ -10,9 +16,8 @@ def f(x):
 # - instantiate left and right outside the bounds of arr,  
 # i.e. (-1 and n, respectively). 
 # -1 and n never gets evaluated directly. 
-# Key assumption: for arr, it's sorted in such a way that : 
-# f(0) = 0, f(1) = 0, .... f(k-1) = 0, f(k) = 1, f(k+1) = 1, ...
-# so we can then binary search the transition point k. 
+
+
 def binary_search(arr): 
     n = len(arr)
     left = -1
