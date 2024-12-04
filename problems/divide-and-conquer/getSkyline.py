@@ -6,7 +6,6 @@
 def isIntersect(left, right):         
     return left[1] >= right[0] and left[0] <= right[1]
 
-
 # the trickiest part of the code. So mamny cases you need to walk through
 def updateIntersection(i, j, left, right, skyline): 
     ls, le, lh = left[i]
