@@ -2,6 +2,7 @@
 # 2109. Adding Spaces to a String
 
 # in my solution, I added sentinel values on spaces so you always take i, i+1
+# use sentinel values on spaces for convenience. 
 
 # Time and space: O(n)
 
