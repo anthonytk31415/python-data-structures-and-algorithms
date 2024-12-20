@@ -3,6 +3,14 @@ from math import inf
 # 769. Max Chunks To Make Sorted
 # https://leetcode.com/problems/max-chunks-to-make-sorted
 
+
+# dynamic programming. 
+# Time: O(n^3*logn)? 
+# Space: O(n^2)
+
+# is this because we have n^2 states for dp with memoization, and each 
+# state calls isEqual, which is an O(nlogn) cost? 
+
 def isEqual(start, end, arr, sorted_arr): 
     return sorted(arr[start:end]) == sorted_arr[start:end]
 
