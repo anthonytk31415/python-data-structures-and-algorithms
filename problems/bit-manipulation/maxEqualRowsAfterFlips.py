@@ -4,8 +4,9 @@
 # Each row and its "binary flip" is a state. Keep a count of all the rows and its flipped states 
 # The one with the largest count is the answer. 
 
-# time: O(n*m) for matrix traversal; 
-# space: O(m+n)
+# Time: O(n*m) for matrix traversal; 
+# Space: O(m+n)
+
 
 from collections import defaultdict
 
