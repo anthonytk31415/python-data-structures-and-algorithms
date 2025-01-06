@@ -2,7 +2,10 @@
 # https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/
 
 
-# DP with left and right
+# DP with left and right: calculate the running some of ones on left and the number of moves 
+# required to move everything on the left to the current i. 
+# Do the same with the right. 
+# At the end, take the total moves for each i. 
 # time and space: O(n); can probably optimize
 
 def convert_to_array(boxes): 
