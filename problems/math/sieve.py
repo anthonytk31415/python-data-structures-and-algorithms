@@ -1,4 +1,10 @@
 from math import sqrt
+
+
+# key iterations: 
+# iterate from 2 to sqrt n + 1 
+# if i prime, start from i**2 to n and mark not prime
+
 def sieve(n): 
     primes = [True]*(n+1)
     primes[1] = primes[0] = False
