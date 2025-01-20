@@ -6,8 +6,8 @@ from math import inf
 
 # DP. For each iteration, try all possible clockwise/counter-clockwise rotations and take the best one plus the 
 # dfs at that ring position and the key position. 
-
 # space: O(mn); time: O(mn)
+
 def doRotation(i, j, ring, key, memo):
     res = inf
     for k in range(len(ring)): 
