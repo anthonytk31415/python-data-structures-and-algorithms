@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/coin-change/description/?envType=study-plan-v2&envId=top-interview-150
 # 322. Coin Change
 
-# DP knapsack problem. Time O(mn), Space; O(n) optimized for prev and current iteration. 
+# Classic DP knapsack problem. Time O(mn), Space; O(n) optimized for prev and current iteration. 
 
 from math import inf 
 def coinChange(coins: list[int], amount: int) -> int:
