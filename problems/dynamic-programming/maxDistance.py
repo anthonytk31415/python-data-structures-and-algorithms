@@ -3,7 +3,6 @@
 
 from math import inf 
 
-
 # Can solve this in O(n) Time and Space with maxLeft and maxRight tricks and DP. 
 # What's a greedy approach? 2 Pointers? 
 
@@ -35,9 +34,6 @@ def maxDistance(arrays):
         maxDist = max(maxDist, distWithMini, distWithMaxi)       
 
     return maxDist
-    # print(mini, maxi)
-    # print(minLeft, minRight)
-    # print(maxLeft, maxRight)
 
 arrays = [[1,2,3],[4,5],[1,2,3]]
 # arrays = [[1],[1]]
