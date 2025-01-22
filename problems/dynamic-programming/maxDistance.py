@@ -4,6 +4,7 @@
 from math import inf 
 
 # Can solve this in O(n) Time and Space with maxLeft and maxRight tricks and DP. 
+# 
 # What's a greedy approach? 2 Pointers? 
 
 def maxDistance(arrays):
