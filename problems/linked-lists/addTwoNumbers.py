@@ -2,7 +2,8 @@
 # 2. Add Two Numbers
 # sample for code practice
 
-# Definition for singly-linked list.
+# Definition for singly-linked list. Add numbers using linked
+# list and carry. 
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
