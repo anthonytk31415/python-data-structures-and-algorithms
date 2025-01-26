@@ -5,6 +5,8 @@ from math import sqrt
 # if i prime, start from i**2 to n and mark not prime
 # time is like less than O(n)
 
+# efficient to find sqrts
+
 def sieve(n): 
     primes = [True]*(n+1)
     primes[1] = primes[0] = False
