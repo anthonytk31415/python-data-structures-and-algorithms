@@ -3,6 +3,8 @@
 
 ## find a the longest monotonic sequence 
 
+
+
 def numTeams(rating):
     def ascending(rating, ascending): 
         numsGreater = {} # key = i for index, value = how many numbers greater than the one at index i
