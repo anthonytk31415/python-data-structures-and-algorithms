@@ -2,7 +2,8 @@
 # 1395. Count Number of Teams
 
 ## find a the longest monotonic sequence 
-
+## define a helper that sees if the sequence is ascending; you can 
+## use the same fn to measure descending. 
 
 
 def numTeams(rating):
