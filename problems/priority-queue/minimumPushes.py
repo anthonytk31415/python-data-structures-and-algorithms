@@ -4,7 +4,9 @@
 from collections import Counter
 from heapq import heappush, heappop
 
-# a priority queue problem. Time: O(nlogn) for sots and the heap; Space: O(n)
+# a priority queue problem. 
+# Time: O(nlogn) for slots and the heap; 
+# Space: O(n)
 
 def minimumPushes(word: str) -> int:
     countChars = [(n, char) for char, n in Counter(word).items()]
