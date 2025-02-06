@@ -8,6 +8,8 @@ from heapq import heappush, heappop
 # Time: O(nlogn) for slots and the heap; 
 # Space: O(n)
 
+# notice that we use the keypad dictionary to store char to keypad. 
+
 def minimumPushes(word: str) -> int:
     countChars = [(n, char) for char, n in Counter(word).items()]
     countChars.sort(key = lambda x: x[0])
