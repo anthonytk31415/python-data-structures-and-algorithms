@@ -7,7 +7,6 @@ from heapq import heappush, heappop
 # a priority queue problem. 
 # Time: O(nlogn) for slots and the heap; 
 # Space: O(n)
-
 # notice that we use the keypad dictionary to store char to keypad. 
 
 def minimumPushes(word: str) -> int:
