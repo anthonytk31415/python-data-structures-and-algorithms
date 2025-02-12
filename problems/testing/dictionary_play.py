@@ -9,9 +9,8 @@ df = pd.DataFrame({
     'std': np.random.uniform(1, 10, size=5)
 })
 
+# print(df.items())
 
-for v in df: 
-    print(v['name'])
 
 
 # mean_std = dict(
@@ -25,7 +24,7 @@ for v in df:
 
 df1 = pd.DataFrame()
 
-print(df)
+# print(df)
 
 a = [1,2,3]
 
@@ -33,4 +32,31 @@ a = [1,2,3]
 # d = dict(((1,x), (x,x)) for x in a)
 # print(d)
 
+b = [True, False, True]
+print(any(b))
+print(all(b))
 
+
+def split_into_two(x): 
+    res = x.split(" ")
+    if len(res) == 1: 
+        res = [""] + res
+    return res
+
+
+def is_int(value):
+    try:
+        int(value)
+        return True
+    except ValueError:
+        return False
+    
+testStrings = ["C81", "123", " C 123"]
+for x in testStrings: 
+    print(x)
+
+def applyNormalization(X):
+    return (X - X.mean()) / X.std()
+
+
+# pandas play
