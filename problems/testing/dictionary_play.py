@@ -56,11 +56,13 @@ testStrings = ["C81", "123", " C 123"]
 for x in testStrings: 
     print(x)
 
+
+#  use vectorization
 def applyNormalization(X):
     return (X - X.mean()) / X.std()
 
 
 # pandas play
-
+# 
 
 
