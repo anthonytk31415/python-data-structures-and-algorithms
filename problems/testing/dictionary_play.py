@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import torch
 
 # Generate random data
 df = pd.DataFrame({
@@ -60,3 +61,6 @@ def applyNormalization(X):
 
 
 # pandas play
+
+
+
