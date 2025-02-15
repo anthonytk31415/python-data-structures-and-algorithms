@@ -10,20 +10,14 @@
 class ProductOfNumbers:
 
     def __init__(self):
-        self.prefix = [0]
-        self.lastZero = 0
+        self.prefix = [1]
+
 
     def add(self, num: int) -> None:
-        if num == 0: toAppend = 0 
-        elif self.lastZero == len(self.prefix) - 1:
-            toAppend = num
-        else: toAppend = self.prefix[-1]*num        
-        self.prefix.append(toAppend)  
-        if num == 0: self.lastZero = len(self.prefix) - 1        
-              
+        if num == 0: self.prefix = [1]
+        else: self.prefix.append(self.prefix[-1]*num)        
+
     def getProduct(self, k: int) -> int:
-        end = len(self.prefix) - 1
-        if end - k + 1 <= self.lastZero: return 0
-        if end - k + 1 == self.lastZero + 1: return self.prefix[-1]
+        if k >= len(self.prefix): return 0
         return self.prefix[-1] / self.prefix[-1-k]
             
