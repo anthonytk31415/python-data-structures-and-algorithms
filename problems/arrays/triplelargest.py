@@ -1,5 +1,8 @@
 from math import inf 
 
+# Prob from APS class
+
+
 def triple(nums): 
     x = y = a = b = c = None
     res = -inf
