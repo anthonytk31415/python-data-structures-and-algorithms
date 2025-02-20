@@ -1,6 +1,7 @@
 from math import inf 
 
 # Prob from APS class
+# Interesting trick wiht swapping; a bit tedious
 
 
 def triple(nums): 
