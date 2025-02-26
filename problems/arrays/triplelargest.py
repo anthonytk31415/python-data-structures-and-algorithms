@@ -2,7 +2,7 @@ from math import inf
 
 # Prob from APS class
 # Interesting trick wiht swapping; a bit tedious
-# linear time 
+# linear time for Time and Constant Time for space. 
 
 def triple(nums): 
     x = y = a = b = c = None
