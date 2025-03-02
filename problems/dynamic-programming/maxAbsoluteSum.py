@@ -3,33 +3,24 @@
 
 # Another Kadane solution. 
 # Time: O(n), Space: O(1)
+# I used a cool trick to feed comparisons as inputs to helper functions
 
-
-
-def longestPos(nums): 
-    maxPos = 0
-    curPos = 0
+def longestStreak(nums, comparison): 
+    overallLargest = 0
+    curLargest = 0
     for num in nums: 
-        curPos = max([0, curPos + num, num])
-        maxPos = max(maxPos, curPos)
-    return maxPos
-
-def longestNeg(nums): 
-    minNeg = 0
-    curNeg = 0
-    for num in nums: 
-        curNeg = min([0, curNeg + num, num])
-        minNeg = min(minNeg, curNeg)
-    return minNeg
+        curLargest = comparison([0, curLargest + num, num])
+        overallLargest = comparison(overallLargest, curLargest)
+    return overallLargest
 
 class Solution:
     def maxAbsoluteSum(self, nums: list[int]) -> int:
-        return max(abs(longestNeg(nums)), abs(longestPos(nums)))
+        return max(abs(longestStreak(nums, max)), abs(longestStreak(nums, min)))
 
 
 nums = [1,8,-7,20, -20,-26,2]
 s = Solution()
 
-print(longestPos(nums))
-print(longestNeg(nums))
+# print(longestPos(nums))
+# print(longestNeg(nums))
 print(s.maxAbsoluteSum(nums))
