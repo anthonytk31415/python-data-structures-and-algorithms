@@ -14,7 +14,6 @@ class Solution:
         left = 0
         countSubarrays = 0
         for right in nums: 
-            
             if right == maxNums: 
                 countMax += 1
             while countMax >= k: 
