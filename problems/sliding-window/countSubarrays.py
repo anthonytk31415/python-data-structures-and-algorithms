@@ -1,7 +1,10 @@
 # https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/   
 # 2962. Count Subarrays Where Max Element Appears at Least K Times
 
-# O(n) Time, O(1) Space Sliding window solution. 
+# O(n) Time
+# O(1) Space 
+
+# Sliding window solution. 
 # start L = 0 and with R, iterate across nums. 
 # Find the smallest window between L and R such that
 # you have k max's. Then increment the result by the 
