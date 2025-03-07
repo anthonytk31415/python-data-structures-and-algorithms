@@ -9,7 +9,7 @@
 # start L = 0 and with R, iterate across nums. 
 # Find the smallest window between L and R such that
 # you have k max's. Then increment the result by the 
-# length between 0 and L, which is L + 1
+# length between 0 and L, which is L + 1. 
 
 class Solution:
     def countSubarrays(self, nums: list[int], k: int) -> int:
