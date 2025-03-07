@@ -3,6 +3,7 @@
 
 
 # prefix sum
+# is prefix a sliding window implementation? 
 # O(n) Time, Space: O(n)
 
 def vowelStrings( words: list[str], queries: list[list[int]]) -> list[int]:
