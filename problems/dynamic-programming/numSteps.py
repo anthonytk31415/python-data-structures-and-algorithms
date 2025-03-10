@@ -3,7 +3,8 @@
 # 1387. Sort Integers by The Power Value
 
 # dp with memoization
-
+# 
+# Space: O(hi - low)
 def numSteps(x, memo):
     if x in memo: 
         return memo[x]
