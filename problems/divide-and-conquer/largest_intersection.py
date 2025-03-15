@@ -6,6 +6,8 @@ from math import inf
 # Key Invariant: maxOverlap will always be an index that has a starting time < the current comparison
 # We apply mergesort. 
 
+# O(nlogn) time, o(n) space
+
 def findLargestOverlap(arr, p, r): 
     if r - p <= 1: return 0
     mid = (r + p) // 2
