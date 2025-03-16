@@ -5,6 +5,7 @@
 # The one with the largest count is the answer. 
 
 # Note we use a bitmask array to make it easier for lookups
+# Use the left and right shifts.
 
 # Time: O(n*m) for matrix traversal; 
 # Space: O(m+n)
