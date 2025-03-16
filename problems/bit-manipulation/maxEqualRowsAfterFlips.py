@@ -4,7 +4,7 @@
 # Each row and its "binary flip" is a state. Keep a count of all the rows and its flipped states 
 # The one with the largest count is the answer. 
 
-# Note we use a bitmask array to make it easier for lookups
+# Note we use a bitmask array to make it easier for lookups, just like the project in Algorithms.
 # Use the left and right shifts.
 
 # Time: O(n*m) for matrix traversal; 
