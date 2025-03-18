@@ -3,7 +3,7 @@
 
 # Each row and its "binary flip" is a state. Keep a count of all the rows and its flipped states 
 # The one with the largest count is the answer. 
-
+# really cool use of bitmasks
 # Note we use a bitmask array to make it easier for lookups, just like the project in Algorithms.
 # Use the left and right shifts.
 
