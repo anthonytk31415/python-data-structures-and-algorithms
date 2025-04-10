@@ -1,6 +1,9 @@
 # https://leetcode.com/problems/4-keys-keyboard/?envType=study-plan-v2&envId=dynamic-programming-grandmaster
 # 651. 4 Keys Keyboard
 
+
+#  tbd complete code
+
 def determine_0(cur, prev):
     maxEntry = prev[0]
     for i in range(1, len(prev)):         
