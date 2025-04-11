@@ -7,7 +7,7 @@
 # moment you find a common ancestor, return int
 
 # Time: O(n) for n nodes in the tree
-# Space: O(n)
+# Space: O(n) 
 
 def dfsDown(root, node): 
     if root == node: return True
