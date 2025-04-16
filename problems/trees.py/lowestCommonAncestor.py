@@ -6,7 +6,7 @@
 # If not found, dfs upward twice. Once for p. Then again for q. When dfsUp on q, the 
 # moment you find a common ancestor, return int
 
-# Time: O(n) for n nodes in the tree.
+# Time: O(n) for n nodes in the tree..
 # Space: O(n) 
 
 def dfsDown(root, node): 
