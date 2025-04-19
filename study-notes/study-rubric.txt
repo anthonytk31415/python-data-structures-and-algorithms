@@ -1,0 +1,43 @@
+Study Rubric 
+
+Two pointers 
+Linked lists 
+
+Stacks and queues 
+    - e.g. paired parenthesis 
+    
+sliding windows
+    - 2 and 3 pointers defining the smallest and largest sliding window for num of substrings 
+    - monotonic stack
+    - prefix sum (1d, 2d)
+    
+Backtracking 
+
+Trees, graphs, dfs, bfs, maybe union find with path compression 
+    - greedy: heaps
+    - top k 
+    - from heapq import heapify, heappush, heappop 
+    - cycle detection
+    - Know how to DFS for the answer and use the answer in the current call. This is top-down DP.
+    - height = O(log(n)) if balanced, O(n) worst case
+    - djikstras (shortest path), min spanning tree, floyd warshall (which is DP/graph shortest path pairs of points)
+
+Sorting
+    - sort / sorted(yourList, key = lambda x: (x[1], x[0]))
+    - review mergesort, quicksort
+
+DP
+    - edit distance 
+    - kadane (classic: largest substring)
+    - subset sum / 0/1 knapsack
+    - longest increasing subsequence (know n^2 dp solution; and then the bisect left optimization for nlogn time)
+    - house robbers 1-3
+
+
+Binary search 
+    - koko eats bananas 
+    - know this template: https://cp-algorithms.com/num_methods/binary_search.html
+
+Intervals 
+
+Bits 
