@@ -10,7 +10,7 @@
 # traverse A and memoize all of the values in a hash map/set. 
 # traverse B. if the counterpart is in the hash, return True
 # otherwise return recursive left or recursive right
-# if not root, return False
+# if not root, return False.
 
 
 def twoSumBSTs(rootA, rootB, target): 
