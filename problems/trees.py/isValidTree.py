@@ -15,6 +15,7 @@
 # build an adjacency list 
 
 # critique on time saving operations
+# O(n) time - need to traverse entire tree in the worst case
 
 from collections import defaultdict
 
