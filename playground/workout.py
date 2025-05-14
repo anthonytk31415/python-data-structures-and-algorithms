@@ -83,8 +83,8 @@ def get_workout_objects(schedule_llm):
         workouts.append(clean_workout)
     return workouts
 
-res = get_workout_objects(workout_llm_data)
+# res = get_workout_objects(workout_llm_data)
 
 # print(res['exercise_sets'][0] )
 
-print(res)
+# print(res)

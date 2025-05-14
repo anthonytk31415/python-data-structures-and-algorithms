@@ -44,4 +44,4 @@ workout_object = {
 }
 
 
-print(is_valid_workout_object(workout_object))
+# print(is_valid_workout_object(workout_object))
