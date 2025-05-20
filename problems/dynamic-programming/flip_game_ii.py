@@ -8,7 +8,7 @@
 # dfs(state) returns basically if you can win at that state. 
 
 # Time: O(2**n) for going through each state
-# Space: O(2**n) for storing the possible states
+# Space: O(2**n) for storing the possible states.
 
 def canWin(currentState): 
     memo = {}    
