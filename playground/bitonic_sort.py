@@ -1,6 +1,7 @@
 
 
 # n = 2**m for m in {0, 1, 2, ...}
+# 
 
 def do_layer(layer, direction, i):
     for j from i-1 down to 0: 
