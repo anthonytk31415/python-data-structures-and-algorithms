@@ -10,6 +10,7 @@
 # Time: O(2**n) for going through each state
 # Space: O(2**n) for storing the possible states.
 
+# pretty fun dp prob
 def canWin(currentState): 
     memo = {}    
     
