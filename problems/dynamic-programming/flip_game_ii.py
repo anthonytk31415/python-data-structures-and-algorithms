@@ -10,7 +10,7 @@
 # Time: O(2**n) for going through each state
 # Space: O(2**n) for storing the possible states.
 
-# TO DO: verify the flip game sequence. Does this work? 
+# TO DO: verify the flip game sequence. Does this work? Definitely, but need to verify.
 
 def canWin(currentState): 
     memo = {}    
