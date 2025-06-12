@@ -4,7 +4,8 @@
 # a visited set and figure out a scheme to "move" and keep track of 
 # coordinates. 
 
-#O(mn) for mn size of the matrix you are traversing. For space and time. 
+# Time and space complexity: 
+# O(mn) for mn size of the matrix you are traversing. For space and time. 
 
 DIR_ROTATION = {
     'UP': 0,
