@@ -5,7 +5,8 @@
 # coordinates. 
 
 # Time and space complexity: 
-# O(mn) for mn size of the matrix you are traversing. For space and time. 
+# O(mn) for mn size of the matrix you are traversing. For space and time..
+
 
 DIR_ROTATION = {
     'UP': 0,
