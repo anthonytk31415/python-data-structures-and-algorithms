@@ -5,6 +5,7 @@
 
 # use a diff array to update your diff_array in O(1) time. 
 # make sure you do update on j + 1 -= 1. Think about why. 
+# (you do this because it's after the fact that the diff drops)
 
 # O(n) Time and space
 
