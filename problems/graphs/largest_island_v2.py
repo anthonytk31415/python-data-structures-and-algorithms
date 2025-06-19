@@ -6,61 +6,53 @@
 
 from collections import deque
 
-DIRS = [[1,0], [-1, 0], [0, 1], [0, -1]]
+DIRS = [0,1,0,-1,0]
 
-def within_bounds(u, v, rows, cols): 
-    return 0 <= u < rows and 0 <= v < cols
-
-def find_island(start, grid, rows, cols): 
-    land = set()
+def find_island(start, grid, m, n): 
+    land = set([start])
     queue = deque([start])
-    land.add(start)
-    queue.append(start)
     while queue: 
         x, y = queue.popleft()
-        for dx, dy in DIRS:
-            u, v = x + dx, y + dy
-            if within_bounds(u, v, rows, cols) and (u, v) not in land and grid[u][v] == 1: 
+        for z in range(4): 
+            u, v = x + DIRS[z], y + DIRS[z+1]
+            if 0 <= u < m and 0 <= v < n and (u, v) not in land and grid[u][v] == 1: 
                 land.add((u,v))
                 queue.append((u,v))    
     return land
 
-def find_islands(grid, rows, cols): 
+def find_islands(grid, m, n): 
     island = 0
     island_size = []            
-    beach_lookup = {}          #beach[cell] = island i    
-    visited = set()
-    for i in range(rows): 
-        for j in range(cols): 
-            if (i, j) not in visited and grid[i][j] == 1: 
-                land = find_island((i,j), grid, rows, cols)
+    beach_lookup = {}          # beach[cell] = island i    
+    for i in range(m): 
+        for j in range(n): 
+            if (i, j) not in beach_lookup and grid[i][j] == 1: 
+                land = find_island((i,j), grid, m, n)
                 island_size.append(len(land))
                 for x in land: 
-                    beach_lookup[x] = island
-                    visited.add(x)                   
+                    beach_lookup[x] = island     
                 island += 1                    
-            visited.add((i,j))
     return island_size, beach_lookup
                 
-def get_island_connections(cell, beach_lookup, island_size, rows, cols): 
+def get_island_connections(cell, beach_lookup, island_size, m, n): 
     x, y = cell
     island_connections = set()
-    for dx, dy in DIRS:
-        u, v = x + dx, y + dy
-        if within_bounds(u, v, rows, cols) and (u, v) in beach_lookup: 
+    for z in range(4): 
+        u, v = x + DIRS[z], y + DIRS[z+1]
+        if 0 <= u < m and 0 <= v < n and (u, v) in beach_lookup: 
             island_connections.add(beach_lookup[(u,v)])
     return sum([island_size[x] for x in island_connections])
 
 def find_max_count(grid): 
-    rows, cols = len(grid), len(grid[0])
-    island_size, beach_lookup = find_islands(grid, rows, cols)
+    m, n = len(grid), len(grid[0])
+    island_size, beach_lookup = find_islands(grid, m, n)
     max_count = 1
     if island_size: 
         max_count = max(max_count, max(island_size))
-    for i in range(rows): 
-        for j in range(cols): 
+    for i in range(m): 
+        for j in range(n): 
             if grid[i][j] == 0: 
-                max_count = max(max_count, 1 + get_island_connections((i,j), beach_lookup, island_size, rows, cols))
+                max_count = max(max_count, 1 + get_island_connections((i,j), beach_lookup, island_size, m, n))
     return max_count
                        
 class Solution:

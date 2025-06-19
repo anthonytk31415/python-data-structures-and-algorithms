@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/reverse-pairs/description/
 # 493. Reverse Pairs
 
+# did we do this eyt?
+
 from typing import List 
 from bisect import bisect_left, insort
 
