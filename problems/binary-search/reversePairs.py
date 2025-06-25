@@ -9,7 +9,7 @@ from bisect import bisect_left, insort
 
 def condition(current_num, num): 
     return 2*num < current_num
-x``
+
 def find_condition(ordered_nums, num): 
     left = -1
     right = len(ordered_nums)
