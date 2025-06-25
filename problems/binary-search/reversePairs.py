@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/reverse-pairs/description/
 # 493. Reverse Pairs
 
-# insort is useful. Exp.
+# insort is useful. Exp
 
 from typing import List 
 from bisect import bisect_left, insort
