@@ -8,7 +8,7 @@
 # (you do this because it's after the fact that the diff drops)
 
 # O(n) Time
-# O(n) space
+# O(n) Space
 
 from typing import List 
 
