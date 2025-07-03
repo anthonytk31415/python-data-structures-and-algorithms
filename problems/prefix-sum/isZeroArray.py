@@ -7,7 +7,7 @@
 # make sure you do update on j + 1 -= 1. Think about why. 
 # (you do this because it's after the fact that the diff drops)
 
-# O(n) Time
+# O(n) Time.
 # O(n) Space
 
 from typing import List 
