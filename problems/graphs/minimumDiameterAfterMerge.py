@@ -6,7 +6,7 @@ from math import inf
 # https://leetcode.com/problems/find-minimum-diameter-after-merging-two-trees/description/
 
 # A really good problem
-# find centroid of the two. Connect. Find length from centroid to min node. ..
+# find centroid of the two. Connect. Find length from centroid to min node. ...
 
 
 def build_adj_list(edges): 
