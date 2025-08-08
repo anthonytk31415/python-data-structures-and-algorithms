@@ -1,7 +1,7 @@
 from heapq import heappush, heappop
 
 
-# implement two heaps
+# implement two heaps. 
 
 class MedianFinder:
 
