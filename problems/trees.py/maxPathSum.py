@@ -1,9 +1,7 @@
 
 class Solution:
     def maxPathSum(self, root):
-    
         def helper(root):
-    
             maxLeft, maxRight = -inf, -inf
             globalLeft, globalRight = -inf, -inf
             if root.left: 
