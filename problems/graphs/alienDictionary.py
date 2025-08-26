@@ -1,6 +1,6 @@
 from collections import defaultdict, Counter
 
-# 
+# Tiem comp.
 
 def createDataStore(words, i, adj, inDegree, outDegree):
     if len(words) == 1: 
