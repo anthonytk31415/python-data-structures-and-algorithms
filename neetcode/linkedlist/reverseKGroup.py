@@ -1,6 +1,6 @@
 # https://neetcode.io/problems/reverse-nodes-in-k-group?list=neetcode150
 
-# great problem..
+# great problem... apply functions in O(n) time.
 
 
 # Definition for singly-linked list.
