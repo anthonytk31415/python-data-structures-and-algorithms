@@ -9,6 +9,10 @@ class Metric(ABC):
 
 class Euclidean(Metric): 
     
+    # should we do an abstractmethod here? 
     def addition(self, a, b): 
         return a + b
     
+
+
+
