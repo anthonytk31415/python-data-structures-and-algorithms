@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-
+# implement an abstract class example
 class Metric(ABC): 
     
     @abstractmethod
