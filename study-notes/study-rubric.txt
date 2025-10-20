@@ -1,5 +1,7 @@
 Study Rubric 
 
+Data Structures and Algorithms
+
 
 Two pointers 
 Linked lists 
