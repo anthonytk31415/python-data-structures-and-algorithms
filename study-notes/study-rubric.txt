@@ -1,6 +1,6 @@
 Study Rubric 
 
-Data Structures and Algorithms
+Data Structures and Algorithms Primer
 
 
 Two pointers 
