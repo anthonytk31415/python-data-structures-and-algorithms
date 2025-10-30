@@ -1,5 +1,6 @@
 from datetime import datetime
 
+# calcs bday
 def calculate_age(birthdate_str):
     birthdate = datetime.strptime(birthdate_str, "%Y-%m-%d").date()
     today = datetime.today().date()
