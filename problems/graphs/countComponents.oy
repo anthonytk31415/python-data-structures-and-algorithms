@@ -1,0 +1,29 @@
+from typing import List
+from collections import defaultdict
+
+
+def countComponents(self, n: int, edges: List[List[int]]) -> int:
+    visited = [0]
+
+    def build_adj_list(): 
+        adj_list = defaultdict(list)
+        for u, v in edges: 
+            adj_list[u].append(v)
+            adj_list[v].append(u)
+        return adj_list
+    
+    num_connected_components = 0
+    adj_list = build_adj_list()
+    
+    def dfs(i): 
+        visited[0] |= (1<<i)
+        for j in adj_list[i]: 
+            if (visited[0] & (1<<j)) == 0: 
+                dfs(j)
+    
+    for i in range(n): 
+        if (visited[0] & (1<<i)) == 0: 
+            num_connected_components += 1
+            dfs(i)
+    
+    return num_connected_components
